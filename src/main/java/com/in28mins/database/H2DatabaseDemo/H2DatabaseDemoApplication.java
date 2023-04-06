@@ -30,7 +30,12 @@ public class H2DatabaseDemoApplication implements CommandLineRunner {
 		logger.info("All users -> {}", dao.findAll());
 //		logger.info("User id 10001 -> {}", dao.findById(10001));
 		
-		logger.info("User id 10001 -> {}", dao.findByName("Ranga"));
+		
+		logger.info("Deleting id 10001 -> {}", dao.deleteById(10001));
+		
+//		logger.info("User id 10001 -> {}", dao.findByName("Ranga"));
+		
+		logger.info("All users -> {}", dao.findAll());
 		
 		
 	}
