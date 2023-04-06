@@ -28,6 +28,7 @@ public class H2DatabaseDemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		logger.info("All users -> {}", dao.findAll());
+		logger.info("User id 10001 -> {}", dao.findById(10001));
 		
 	}
 
