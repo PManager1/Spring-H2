@@ -43,21 +43,26 @@ public class PersonJdbcDao {
 
 	
 //	public int update (Person person){		
-//		return jdbcTemplate.update("update person" + "set name= ?, location= ?, birth_date=? " + "where id =?", 
+//		return jdbcTemplate.update("update person" 
+//									+ "set name= ?, location= ?, birth_date=? " 
+//									+ "where id =?", 
 //				new Object[] {
-//						
-//						person.getName(), person.getLocation(), new Timestamp (person.getBirthDate().getTime()), person.getId()  
+//						person.getName(), 
+//						person.getLocation(), 
+//						new Timestamp (person.getBirthDate().getTime()), 
+//						person.getId()  
 //								 });
 //				
 //		}
+	
+	
+	public int update(Person person) {
+		return jdbcTemplate.update("update person " + " set name = ?, location = ?, birth_date = ? " + " where id = ?",
+				new Object[] { person.getName(), person.getLocation(), new Timestamp(person.getBirthDate().getTime()),
+						person.getId() });
+	}
+	
 
-	
-	
-//	public int insert(Person person){		
-//		return jdbcTemplate.update("INSERT into person (id, name, location, birth_date )"
-//				+ "values( ?, ? , ?, ?)", 
-//				new Object[] { person.getId(), person.getLocation(), person.getBirthDate().getTime()  });
-//		}
 	
 	
 	public int insert(Person person) {

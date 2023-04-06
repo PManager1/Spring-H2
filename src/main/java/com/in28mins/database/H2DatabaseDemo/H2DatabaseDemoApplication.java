@@ -33,16 +33,21 @@ public class H2DatabaseDemoApplication implements CommandLineRunner {
 //		logger.info("User id 10001 -> {}", dao.findById(10001));
 		
 		
-		logger.info("Deleting id 10001 -> {}", dao.deleteById(10001));
+		
 		
 //		logger.info("User id 10001 -> {}", dao.findByName("Ranga"));
 		
 //		logger.info("All users -> {}", dao.findAll());
 		
 //		
+		logger.info("User id 10001 -> {}", dao.findById(10001));
 		
 		logger.info("Inserting 20004 -> {}", dao.insert( new Person(20004, "Tara", "Berlin", new Date() )) );
-		logger.info("All users -> {}", dao.findAll());		
+		logger.info("All users -> {}", dao.findAll());
+		
+//		logger.info("Updating 10001 -> {}", dao.update( new Person(10001, "Tara2", "Berlin_2", new Date() )) );
+		
+//		logger.info("All users -> {}", dao.findAll());
 	}
 
 }
