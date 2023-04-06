@@ -1,6 +1,7 @@
 package com.in28mins.database.H2DatabaseDemo.entity;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 public class Person {
 	private int id; 
@@ -12,6 +13,7 @@ public class Person {
 		
 	}
 	
+	
 	public Person(int id, String name, String location, Date birthDate) {
 		super();
 		this.id = id;
@@ -19,6 +21,7 @@ public class Person {
 		this.location = location;
 		this.birthDate = birthDate;
 	}
+	
 
 	public int getId() {
 		return id;
