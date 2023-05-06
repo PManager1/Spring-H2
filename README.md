@@ -2,6 +2,10 @@
 
 
 How to connect to the h2 DB. 
+
+in application properties file:  spring.h2.console.enabled=true   /// thats it. 
+
+
 After you start the h2 db, from the console pick the value after mem: ( this string )  
 & past it in the h2-console inside the JDBC  URL. 
 No need to put anyting in password / username.  keep it same as it is. 
